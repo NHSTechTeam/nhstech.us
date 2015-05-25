@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^tv\.nhstech\.us$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.tv\.nhstech\.us$
+RewriteRule ^/?$ "https\:\/\/docs\.google\.com\/forms\/d\/1_xCOGTw08bLjmf_IOHwaG7g2VXz_vefrXYXqHEWdYBo\/viewform" [R=301,L]
+

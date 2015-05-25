@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^advisory\.nhstech\.us$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.advisory\.nhstech\.us$
+RewriteRule ^/?$ "https\:\/\/docs\.google\.com\/forms\/d\/1DRqo3pDFS6qUKmvnFl4s3mIvDGlHb744Nnplm_\-_2ek\/viewform" [R=301,L]
+

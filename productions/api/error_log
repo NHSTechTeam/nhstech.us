@@ -1,0 +1,16 @@
+[13-Mar-2015 20:14:39 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/nhstechteam/public_html/productions/api/api.php on line 48
+[13-Mar-2015 20:16:00 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/nhstechteam/public_html/productions/api/api.php on line 49
+[13-Mar-2015 21:16:24 UTC] PHP Fatal error:  Call to undefined function add_editting() in /home/nhstechteam/public_html/productions/api/add_editting.php on line 4
+[19-Mar-2015 02:03:50 UTC] PHP Fatal error:  Function name must be a string in /home/nhstechteam/public_html/productions/api/add_password.php on line 3
+[19-Mar-2015 02:04:47 UTC] PHP Fatal error:  Function name must be a string in /home/nhstechteam/public_html/productions/api/add_password.php on line 3
+[19-Mar-2015 02:05:15 UTC] PHP Fatal error:  Function name must be a string in /home/nhstechteam/public_html/productions/api/add_password.php on line 3
+[19-Mar-2015 21:33:29 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/nhstechteam/public_html/productions/api/add_password.php on line 9
+[19-Mar-2015 21:33:35 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/nhstechteam/public_html/productions/api/add_password.php on line 9
+[19-Mar-2015 21:35:15 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/nhstechteam/public_html/productions/api/add_password.php on line 10
+[19-Mar-2015 21:35:31 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/nhstechteam/public_html/productions/api/add_password.php on line 11
+[19-Mar-2015 21:35:52 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/nhstechteam/public_html/productions/api/add_password.php on line 11
+[22-Apr-2015 14:06:07 UTC] PHP Fatal error:  Call to undefined function reset_password() in /home/nhstechteam/public_html/productions/api/reset_password.php on line 4
+[22-Apr-2015 14:06:11 UTC] PHP Fatal error:  Call to undefined function delete() in /home/nhstechteam/public_html/productions/api/delete.php on line 3
+[22-Apr-2015 14:06:20 UTC] PHP Fatal error:  Call to undefined function reset_password() in /home/nhstechteam/public_html/productions/api/reset_password.php on line 4
+[22-Apr-2015 14:06:24 UTC] PHP Fatal error:  Call to undefined function reset_password() in /home/nhstechteam/public_html/productions/api/reset_password.php on line 4
+[22-Apr-2015 14:06:27 UTC] PHP Fatal error:  Call to undefined function delete() in /home/nhstechteam/public_html/productions/api/delete.php on line 3
