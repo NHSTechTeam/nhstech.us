@@ -1,256 +1,268 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>NHS Tech Team</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.scrollgress.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-wide.css" />
-			<link rel="stylesheet" href="css/style-noscript.css" />
-		</noscript>
-		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//http://www.google-analytics.com/analytics.js','ga');
+<head>
+	<title>NHS Tech Team</title>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<meta content="" name="description">
+	<meta content="" name="keywords"><!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 
-  ga('create', 'UA-52049115-3', 'auto');
-  ga('send', 'pageview');
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.dropotron.min.js"></script>
+	<script src="js/jquery.scrolly.min.js"></script>
+	<script src="js/jquery.scrollgress.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/skel-layers.min.js"></script>
+	<script src="js/init.js"></script><noscript>
+	<link href="css/skel.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style-wide.css" rel="stylesheet">
+	<link href="css/style-noscript.css" rel="stylesheet"></noscript>
+	<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//http://www.google-analytics.com/analytics.js','ga');
 
-		</script>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-	</head>
-	<body class="index">
+	ga('create', 'UA-52049115-3', 'auto');
+	ga('send', 'pageview');
 
-    <!-- For those unskilled in HTML looking over this document, I suggest you open this in something like Dreamweaver to understand how the code works. I will attempt to comment my code, however in the event myself or anyone else fails to, use said programs. However if you understand all the code, enjoy hating the way I formatted it. -->
+	</script><!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+</head>
 
+<body class="index">
+	<!-- For those unskilled in HTML looking over this document, I suggest you open this in something like Dreamweaver to understand how the code works. I will attempt to comment my code, however in the event myself or anyone else fails to, use said programs. However if you understand all the code, enjoy hating the way I formatted it. -->
+	<!-- Header -->
 
-		<!-- Header -->
-			<header id="header" class="alt">
-				<h1 id="logo"><a href="index.html">NHS Tech Team<span></span></a></h1>
-				<nav id="nav">
+	<header class="alt" id="header">
+		<h1 id="logo"><a href="index.html">NHS Tech Team<span></span></a></h1>
+
+		<nav id="nav">
+			<ul>
+				<li class="current">
+					<a href="index.html">Welcome</a>
+				</li>
+
+				<li class="submenu">
+					<a href="">Explore</a>
+
 					<ul>
-						<li class="current"><a href="index.html">Welcome</a></li>
-						<li class="submenu"><a href="">Explore</a>
-							<ul>
-
-								<li><a href="Projects.html">Projects</a></li>
-
-								<li class="submenu">
-									<a href="">Member Resources</a>
-									<ul>
-                                    <li class="submenu">
-										<li><a href="https://drive.google.com/folderview?id=0B3e6cL0rTgAUOXMyNTcxalkwclE&usp=sharing">Holocron</a></li>
-										<li><a href="https://drive.google.com/folderview?id=0B3Q5HhPzEGhKcWd5UzJSSlJuRmc&usp=sharing">Datalock</a></li>
-										<li><a href="https://plus.google.com/u/0/communities/117566773649719588707/events">Productions</a></li>
-									</ul>
-								</li>
-							</ul>
+                    	<li>
+							<a href="member/index.html">Member Center</a>
 						</li>
-						<li><a href="mailto:nhstechteam@googlegroups.com" class="button special">Contact Us</a></li>
+						<li>
+							<a href="Projects.html">Projects</a>
+						</li>
 					</ul>
-				</nav>
-			</header>
+				</li>
 
-		<!-- Banner -->
-			<section id="banner">
+				<li>
+					<a class="button special" href="mailto:team@nhstech.us">Contact Us</a>
+				</li>
+			</ul>
+		</nav>
+	</header><!-- Banner -->
 
-				<!--
+	<section id="banner">
+		<!--
 					".inner" is set up as an inline-block so it automatically expands
 					in both directions to fit whatever's inside it. This means it won't
 					automatically wrap lines, so be sure to use line breaks where
 					appropriate (<br />).
 				-->
-				<div class="inner">
 
+		<div class="inner">
+			<header>
+				<h2>NHS Tech Team</h2>
+			</header>
+
+			<p>The Newtown High School Technology Team Site<br>
+NHSTech.us</p>
+
+			<footer>
+				<ul class="buttons vertical">
+					<li>
+						<a class="button fit scrolly" href="#main">Explore Our Site</a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+	</section><!-- Welcome  -->
+
+	<article id="main">
+		<header class="special container">
+			<span class="icon fa-users"></span>
+
+			<h2>Welcome to the Newtown High School<br>
+			Technology Team's Website.</h2>
+
+			<p>The Technology Team, exists to provide a social medium for the exchange of knowledge among students with a preexisting understanding and a never-ending curiosity regarding technology of all kinds, as well as a learning environment to increase the Team’s ability as a whole.</p>
+		</header><!-- What do we do? -->
+
+		<section class="wrapper style2 container special-alt">
+			<div class="row half">
+				<div class="8u">
 					<header>
-						<h2>NHS Tech Team</h2>
+						<h2>What do we do?</h2>
 					</header>
-					<p>The Newtown High School Technology Team Site
-                    </br>
-                   <p> NHSTech.us</p>
+
+					<p>The Newtown High School Tech Team works to create a atmosphere where students are not only able to learn but gain experience in working in a technology field as well as gaining other real world skills such as teamwork and running a business. The Technology Team has been around for many years and continues to have a lasting impression on all its members.</p>
 
 					<footer>
-						<ul class="buttons vertical">
-							<li><a href="#main" class="button fit scrolly">Explore Our Site</a></li>
+						<ul class="buttons">
+							<li>
+								<a class="button fit scrolly" href="#cta">Want to get involved?</a>
+							</li>
 						</ul>
 					</footer>
-
 				</div>
 
-			</section>
+				<div class="4u skel-cell-important">
+					<ul class="featured-icons">
+						<li><span class="icon fa-refresh fa-spin"><span class="label">Feature 1</span></span></li>
 
-		<!-- Welcome  -->
-			<article id="main">
+						<li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
 
-				<header class="special container">
-					<span class="icon fa-users"></span>
-					<h2>Welcome to the Newtown High School
-					<br />
-					Technology Team's Website.</h2>
-					<p>The Technology Team, exists to provide a social medium for the exchange of knowledge among students with a preexisting understanding and a never-ending curiosity regarding technology of all kinds, as well as a learning environment to increase the Team’s ability as a whole.
-					</p>
-				</header>
+						<li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
 
-				<!-- What do we do? -->
-					<section class="wrapper style2 container special-alt">
-						<div class="row half">
-							<div class="8u">
+						<li><span class="icon fa-wifi"><span class="label">Feature 4</span></span></li>
 
-								<header>
-									<h2>What do we do?</h2>
-								</header>
-								<p>The Newtown High School Tech Team works to create a atmosphere where students are not only able to learn but gain experience in working in a technology field as well as gaining other real world skills such as teamwork and running a business. The Technology Team has been around for many years and continues to have a lasting impression on all its members.</p>
-								<footer>
-									<ul class="buttons">
-										<li><a href="#cta" class="button fit scrolly">Want to get involved?</a></li>
-                                        <li><a href="#" class="button fit scrolly">Services we offer</a></li>
-									</ul>
-								</footer>
+						<li><span class="icon fa-video-camera"><span class="label">Feature 5</span></span></li>
 
-							</div>
-							<div class="4u skel-cell-important">
+						<li><span class="icon fa-cog fa-spin"><span class="label">Feature 6</span></span></li>
+					</ul>
+				</div>
+			</div>
+		</section><!-- Two -->
 
-								<ul class="featured-icons">
-									<li><span class="icon fa-refresh fa-spin"><span class="label">Feature 1</span></span></li>
-									<li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
-									<li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
-									<li><span class="icon fa-wifi"><span class="label">Feature 4</span></span></li>
-									<li><span class="icon fa-video-camera"><span class="label">Feature 5</span></span></li>
-									<li><span class="icon fa-cog fa-spin"><span class="label">Feature 6</span></span></li>
-								</ul>
+		<section class="wrapper style1 container special">
+			<div class="row">
+				<div class="4u">
+					<section>
+						<span class="icon featured fa-film"></span>
 
-							</div>
-						</div>
-					</section>
-
-				<!-- Two -->
-					<section class="wrapper style1 container special">
-						<div class="row">
-							<div class="4u">
-
-								<section>
-									<span class="icon featured fa-film"></span>
-									<header>
-										<h3>Newtown Television</h3>
-									</header>
-									<p>The team is in charge of managing the local student community access television station, NTV (Channel 194). The team contributes content to the channel and is also reponsible for maintenance and ensuring the broadcast is always running and entertaining.</p>
-								</section>
-
-							</div>
-							<div class="4u">
-
-								<section>
-									<span class="icon featured fa-folder-open"></span>
-									<header>
-										<h3>Projects like This</h3>
-									</header>
-									<p>Part of being a member of the team is personal projects. Project criteria is pretty broad, and we encourage projects involving any technology a member is passionate about. Even websites like this can count as a major project if it involves enough learning and personal growth.</p>
-								</section>
-
-							</div>
-							<div class="4u">
-
-								<section>
-									<span class="icon featured fa-book"></span>
-									<header>
-										<h3>Education</h3>
-									</header>
-									<p>At the forefront of the team is education. The team exists to provide a medium in which students can learn, engage, and perform in areas of technology in a fun and productive school environment.</p>
-								</section>
-
-							</div>
-						</div>
-					</section>
-
-				<!-- Projects/Examples of Work -->
-					<section class="wrapper style3 container special">
-
-						<header class="major">
-							<h2>Examples of our work</h2>
+						<header>
+							<h3>Newtown Television</h3>
 						</header>
 
-						<div class="row">
-							<div class="6u">
-
-								<section>
-									<a class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-									<header>
-										<h3>Web Dev</h3>
-									</header>
-									<p>A project in the team in order to create a website for the team. The site you see before you is the end result of this project.</p>
-								</section>
-
-							</div>
-							<div class="6u">
-
-								<section>
-									<a class="image featured" href="ntv/index.html"><img src="images/pic02.png" alt="" /></a>
-									<header>
-										<h3>Newtown Television</h3>
-									</header>
-									<p>NTV is the local student-run community access TV station for Newtown, CT. The NHS Tech Team not only is in charge of this channel, but is responsible for it in nearly all regards.</p>
-								</section>
-
-							</div>
-						</div>
-						<div class="row"> </div>
-
-						<footer class="major">
-							<ul class="buttons">
-							  <li><a href="Projects.html" class="button">See More Projects</a></li>
-						  </ul>
-						</footer>
-
+						<p>The team is in charge of managing the local student community access television station, NTV (Channel 194). The team contributes content to the channel and is also reponsible for maintenance and ensuring the broadcast is always running and entertaining.</p>
 					</section>
+				</div>
 
-			</article>
+				<div class="4u">
+					<section>
+						<span class="icon featured fa-folder-open"></span>
 
-		<!-- CTA -->
-			<section id="cta">
+						<header>
+							<h3>Projects like This</h3>
+						</header>
 
-				<header>
-					<h2>Interested in Us?</h2>
-					<p>If you think we can be of service to you or you wish to become a member, contact us below.</p>
-					<p>The Team Meets every Tuesday and Thursday in C080 directly after school. </p>
-				</header>
-				<footer>
-					<ul class="buttons">
-						<li><a href="mailto:nhstechteam@googlegroups.com" class="button special">Contact Us</a></li>
-						<li></li>
-					</ul>
-				</footer>
+						<p>Part of being a member of the team is personal projects. Project criteria is pretty broad, and we encourage projects involving any technology a member is passionate about. Even websites like this can count as a major project if it involves enough learning and personal growth.</p>
+					</section>
+				</div>
 
-			</section>
+				<div class="4u">
+					<section>
+						<span class="icon featured fa-book"></span>
 
-		<!-- Footer -->
-			<footer id="footer">
+						<header>
+							<h3>Education</h3>
+						</header>
 
-				<ul class="icons">
-					<li><a href="https://twitter.com/NTVTechTeam" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="https://www.facebook.com/NHSTechTeam" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="https://plus.google.com/u/0/communities/117566773649719588707" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
-					<li><a href="https://github.com/NHSTechTeam" class="icon circle fa-github"><span class="label">Github</span></a></li>
+						<p>At the forefront of the team is education. The team exists to provide a medium in which students can learn, engage, and perform in areas of technology in a fun and productive school environment.</p>
+					</section>
+				</div>
+			</div>
+		</section><!-- Projects/Examples of Work -->
 
+		<section class="wrapper style3 container special">
+			<header class="major">
+				<h2>Examples of our work</h2>
+			</header>
+
+			<div class="row">
+				<div class="6u">
+					<section>
+						<a class="image featured"><img alt="" src="images/pic01.jpg"></a>
+
+						<header>
+							<h3>Web Dev</h3>
+						</header>
+
+						<p>A project in the team in order to create a website for the team. The site you see before you is the end result of this project.</p>
+					</section>
+				</div>
+
+				<div class="6u">
+					<section>
+						<a class="image featured" href="ntv/index.html"><img alt="" src="images/pic02.png"></a>
+
+						<header>
+							<h3>Newtown Television</h3>
+						</header>
+
+						<p>NTV is the local student-run community access TV station for Newtown, CT. The NHS Tech Team not only is in charge of this channel, but is responsible for it in nearly all regards.</p>
+					</section>
+				</div>
+			</div>
+
+			<div class="row"></div>
+
+			<footer class="major">
+				<ul class="buttons">
+					<li>
+						<a class="button" href="Projects.html">See More Projects</a>
+					</li>
 				</ul>
-
-				<ul class="copyright">
-				  <li>&copy;2014-2015 <a href="http://nhstech.us/">Newtown High School Technology Team</a></li>
-				  <li>Designed by: Tech Team Students</li>
-				</ul>
-
 			</footer>
-	</body>
+		</section>
+	</article><!-- CTA -->
+
+	<section id="cta">
+		<header>
+			<h2>Interested in Us?</h2>
+
+			<p>If you think we can be of service to you or you wish to become a member, contact us below.</p>
+
+			<p>The Team Meets every Tuesday and Thursday in C080 directly after school.</p>
+		</header>
+
+		<footer>
+			<ul class="buttons">
+				<li>
+					<a class="button special" href="mailto:team@nhstech.us">Contact Us</a>
+				</li>
+
+				<li></li>
+			</ul>
+		</footer>
+	</section><!-- Footer -->
+
+	<footer id="footer">
+		<ul class="icons">
+			<li>
+				<a class="icon circle fa-twitter" href="https://twitter.com/NTVTechTeam"><span class="label">Twitter</span></a>
+			</li>
+
+			<li>
+				<a class="icon circle fa-facebook" href="https://www.facebook.com/NHSTechTeam"><span class="label">Facebook</span></a>
+			</li>
+
+			<li>
+				<a class="icon circle fa-google-plus" href="https://plus.google.com/u/0/communities/117566773649719588707"><span class="label">Google+</span></a>
+			</li>
+
+			<li>
+				<a class="icon circle fa-github" href="https://github.com/NHSTechTeam"><span class="label">Github</span></a>
+			</li>
+		</ul>
+
+		<ul class="copyright">
+			<li>&copy;2014-2015 <a href="http://nhstech.us/">Newtown High School Technology Team</a>
+			</li>
+
+			<li>Designed by: Tech Team Students</li>
+		</ul>
+	</footer>
+</body>
 </html>
