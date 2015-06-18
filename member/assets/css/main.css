@@ -1571,6 +1571,22 @@
 			background: url("../../images/banner.jpg");
 			background-size: cover;
 		}
+		
+		#banner-wrapper .first {
+			background: url("../../images/first.jpg");
+			background-size: cover;
+		}
+		
+		#banner-wrapper .second {
+			background: url("../../images/second.jpg");
+			background-size: cover;
+		}
+		
+		#banner-wrapper .third {
+			background: url("../../images/third.jpg");
+			background-size: cover;
+		}
+
 
 		#banner-wrapper p {
 			text-align: center;
