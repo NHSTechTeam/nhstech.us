@@ -92,5 +92,22 @@
 						.css('transition', 'none');
 
 	});
+		function scrollDown(el) {
+    el.animate({
+        scrollTop: el[0].scrollHeight
+    }, 50000, function() {
+        scrollUp(el);
+    });
+}
+
+function scrollUp(el) {
+    el.animate({
+        scrollTop: 0
+    }, 50000, function() {
+        scrollDown(el);
+    });
+}
+
+scrollDown($("html,body"));
 
 })(jQuery);

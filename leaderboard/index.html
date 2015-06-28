@@ -18,7 +18,7 @@
      google.load('visualization', '1.0', {'packages':['bar']});
        google.setOnLoadCallback(drawGID);
          function drawGID() {
-      var queryString = encodeURIComponent('SELECT A, B, C');
+      var queryString = encodeURIComponent('SELECT A, B');
 
       var query = new google.visualization.Query(
           'https://docs.google.com/spreadsheets/d/1cnoORqpv3siFerbq4bnJFtVXjJrRhUvIbzqYdWhYIjM/gviz/tq?gid=0&headers=1&tq=' + queryString);
@@ -42,25 +42,6 @@
       chart.draw(data, options, { height: 1000 });
     }
     </script>
-    <script>
-	function scrollDown(el) {
-    el.animate({
-        scrollTop: el[0].scrollHeight
-    }, 5000, function() {
-        scrollUp(el)
-    });
-};
-
-function scrollUp(el) {
-    el.animate({
-        scrollTop: 0
-    }, 5000, function() {
-        scrollDown(el);
-    });
-};
-
-scrollDown($("html,body"));​
-	</script>
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
