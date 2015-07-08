@@ -1,5 +1,22 @@
 NHS Tech Team Website
 =====================
+Index:
+------
+* Main Page
+   * Projects
+      * Game Dev
+* Graduation
+* Member Center
+   * Leaderboard
+* NTV
+* Clubs
+* Productions
+
+### Redirects
+* Advisory
+* TV
+* Holocron
+
 Credits:
 --------
 ### Icons:
