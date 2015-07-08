@@ -2,20 +2,19 @@ NHS Tech Team Website
 =====================
 Index:
 ------
-* Main Page
-   * Projects
-      * Game Dev
-* Graduation
-* Member Center
-   * Leaderboard
-* NTV
-* Clubs
-* Productions
+* [Main Page](http://nhstech.us)
+   * [Projects](http://nhstech.us/Projects.html)
+      * [Game Dev](http://nhstech.us/game-dev.html)
+* [Graduation](http://graduation.nhstech.us)
+* [Member Center](http://member.nhstech.us)
+   * [Leaderboard](http://leaderboard.nhstech.us)
+* [NTV](http://ntv.nhstech.us)
+* [Clubs](http://clubs.nhstech.us)
+* [Productions](http://productions.nhstech.us)
 
 ### Redirects
-* Advisory
-* TV
-* Holocron
+* [TV](http://tv.nhstech.us)
+* [Holocron](http://holocron.nhstech.us)
 
 Credits:
 --------
