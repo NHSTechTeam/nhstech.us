@@ -25,35 +25,38 @@
 	<body>
 		<!-- Video -->
 			<article class="container box style3">
-				<SCRIPT>
+		<script>
 function passWord() {
-var testV = 1;
-var pass1 = prompt('Please Enter Your Password',' ');
-while (testV < 3) {
-if (!pass1) 
-history.go(-1);
-if (pass1.toLowerCase() == "letmein") {
-alert('Enjoy your Digital Copy of Graduation');
-window.open('grad2015.html');
-break;
-} 
-testV+=1;
-var pass1 = 
-prompt('Access Denied - Password Incorrect, Please Try Again.');
-}
-if (pass1.toLowerCase()!="password" & testV ==3) 
-history.go(-1);
-return " ";
-} 
-</SCRIPT>
-                <header>
-				  <h2>View Graduation Online</h2>
-				  <p>If you ordered a HD or above Graduation DVD. Then it came with a password to view the whole event online as well as with the DVD. Enter the password here to view Graduation on any of your devices.</p>
-                    <form>
-                    <input type="button" value="View Now" onClick="passWord()">
-					</FORM>
-				</header>
-			</article>
+		var testV = 1;
+		var pass1 = prompt('Please Enter Your Password',' ');
+		while (testV < 3) {
+		if (!pass1)
+		history.go(-1);
+		if (pass1.toLowerCase() == "awf4pt") {
+		alert('Enjoy your Digital Copy of Graduation');
+		window.open('grad2015.html');
+		break;
+		}
+		testV+=1;
+		var pass1 =
+		prompt('Access Denied - Password Incorrect, Please Try Again.');
+		}
+		if (pass1.toLowerCase()!="password" & testV ==3)
+		history.go(-1);
+		return " ";
+		}
+		</script>
+
+		<header>
+			<h2>View Graduation Online</h2>
+
+			<p>If you ordered a Deluxe Graduation DVD. Then it came with a password to view the whole event online as well as with the DVD. Enter the password here to view Graduation on any of your devices.</p>
+
+			<form>
+				<input onclick="passWord()" type="button" value="View Now">
+			</form>
+		</header>
+	</article>
 		<!-- Generic -->
 		<!--
 			<article class="container box style3">

@@ -1,0 +1,159 @@
+<?php
+
+//start the session
+session_start();
+
+//include configuration and functions files
+include("include/configuration.php");
+
+//link to database
+$link = mysql_connect(CONF_LOCATION, CONF_ADMINID, CONF_ADMINPASS) or die("poop"); mysql_select_db(CONF_DATABASE) or die("poop");
+
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> CSV Calendar Creator - Newtown High School </title>
+  <meta name="Author" content="Charles Dumais">
+  <script type="text/javascript">
+<!--
+function SetAllCheckBoxes(FormName, FieldName, CheckValue)
+{
+	if(!document.forms[FormName])
+		return;
+	var objCheckBoxes = document.forms[FormName].elements[FieldName];
+	if(!objCheckBoxes)
+		return;
+	var countCheckBoxes = objCheckBoxes.length;
+	if(!countCheckBoxes)
+		objCheckBoxes.checked = CheckValue;
+	else
+		// set the check value for all check boxes
+		for(var i = 0; i < countCheckBoxes; i++)
+			objCheckBoxes[i].checked = CheckValue;
+}
+// -->
+</script>
+ </head>
+ <body bgcolor=#a8d3ff>
+
+ <?
+
+if (isset($_POST['submitschedule'])){
+	//let's record the access information
+	//log access
+	$ip=$_SERVER['REMOTE_ADDR'];
+	$id = session_id();
+	$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+	$scheduleraw = $_POST['period1'].":".$_POST['period2'].":".$_POST['period3'].":".$_POST['period4'].":".$_POST['period5'].":".$_POST['period6'].":".$_POST['period7'].":".$_POST['period8'];
+	$scheduleraw = mysql_real_escape_string(strip_tags(trim($scheduleraw)));
+	$logquery="INSERT into access_log values (NULL, DATE_ADD(NOW(), INTERVAL 2 HOUR), \"".$id."\",\"".$ip."\",\"".$hostname."\",\"".$scheduleraw."\")";
+	mysql_query($logquery);
+
+	//run through POST variable and get info from database
+	//first get active dates
+	$date_query="select * from Days where Date between \"".$_POST['startdate']."\" and \"".$_POST['enddate']."\"";
+	$activedates=mysql_query($date_query);
+
+	//Special Days
+	$special_days = array("AS","BS","CS","DS","ES","FS","GS","HS","S","SS","M1","M2","M3","M4","Y1","Y2","Y3","Y4","EAA","EAB","EAC","EAD","EAE","EAF","EAG","EAH");
+	//
+
+	$export_text = "";
+
+	$export_text = "Subject,Start Date,Start Time,End Date,End Time\r\n";
+
+	while ($single_date = mysql_fetch_assoc($activedates)) {
+		for ($i=1;$i<9;$i++){
+			$period = "period".$i;
+			$day = "day".$i;
+			if (isset($_POST[$period]) && (strlen($_POST[$period]) > 0)) {
+				$_POST[$period] = mysql_real_escape_string(strip_tags(trim($_POST[$period])));
+				$_POST[$period] = str_replace(",","-",$_POST[$period]);
+				if (in_array($single_date['Day'],$special_days)){
+				//if ($single_date['Day'] == "X"){
+					//get times from database
+					$specialget_query="Select * from Bells where Day=\"".$single_date['Day']."\" AND Type=\"".$single_date['Type']."\" AND Period=\"".$i."\"";
+					$specialget = mysql_query($specialget_query);
+					$specialgetrow = mysql_fetch_array($specialget);
+					if (!is_null($specialgetrow['Start'])){
+						$export_text .= $_POST[$period].",".$single_date['Date'].",".$specialgetrow['Start'].",".$single_date['Date'].",".$specialgetrow['End']."\r\n";
+					}
+				} else {
+					for ($j=0;$j<10;$j++){
+						if (isset($_POST[$day][$j]) && (strlen($_POST[$day][$j]) > 0) && ($_POST[$day][$j] == $single_date['Day'])) {
+							$specialget_query2="Select * from Bells where Type=\"".$single_date['Type']."\" AND Period=\"".$i."\" AND Day=\"".$_POST[$day][$j]."\"";
+							$specialget2 = mysql_query($specialget_query2);
+							$specialgetrow2 = mysql_fetch_array($specialget2);
+							if (!is_null($specialgetrow2['Start'])){
+								$export_text .= $_POST[$period].",".$single_date['Date'].",".$specialgetrow2['Start'].",".$single_date['Date'].",".$specialgetrow2['End']."\r\n";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	//write to file
+	$calfile = fopen("calendar.csv","w");
+	fwrite($calfile, $export_text);
+	fclose($calfile);
+
+?>
+
+	<a href="http://nhstech.us/calendar/calendar.csv">Here is the file</a> (right-click on it and select "Save Link As...")</br></br>
+
+	And here are instructions for creating a new calendar in Gmail and importing the CSV file:
+	<ul>
+	<li>Open Gmail and access the calendar tab</li>
+	<li>Click on the "gear" in the upper right corner and access "settings" <img src="settings.PNG" width="229" height="304" border="0" alt=""></li>
+	<li>Click on the "Calendars" tab <img src="calendartab.PNG" width="359" height="168" border="0" alt=""></li>
+	<li>Click on the "create new calendar" button <img src="createnewcalendar.PNG" width="404" height="319" border="0" alt=""></li>
+	<li>Create a new calendar by entering a calendar name and clicking on "Create Calendar" (you can import the file directly into your main calendar <em>but</em> if you create a new calendar you can always delete it or share it without affecting your other events) <img src="createnewcalendar2.PNG" width="530" height="202" border="0" alt=""></li>
+	<li>Return to calendar, then settings (under the gear), then calendar, and "import calendar" <img src="import.PNG" width="398" height="42" border="0" alt=""></li>
+	<li>Select the CSV file that you downloaded, select your new calendar, and then click "Import" <img src="import2.PNG" width="532" height="295" border="0" alt=""></li>
+	</ul>
+
+<?
+
+} else {
+
+?>
+
+	<h1><img src="nighthawktrans.png" width="65" height="62" border="0" alt="">Welcome to the Newtown High School Calendar Generator</h1>
+	<font style="color:red"><h2>Usable for the 2015-2016 School Year</h2></font>
+	This program will generate a CSV file (suitable for import to Google Calendar) that recognizes Letter Day Designations, Half Days and even Finals.</br></br>
+	How to use it:
+	<ul>
+	<li>Be creative.  Do it in pieces and establish a calendar for each course or section to be shared with others.</li>
+	<li>Tab Index has been set to start with the Start Date and End Date, then work through the period names, then the letter days</li>
+	<li>In the "Start Date" field, enter the date you would like the calendar information to begin on.  Appropriate format is YYYY-MM-DD.</li>
+	<li>In the "End Date" field, enter the date you would like the calendar information to end on.  Appropriate format is YYYY-MM-DD. (Perhaps you have semester courses and need to run this twice.)</li>
+	<li>In the "Period # Class" field, enter the name of the course, the duty, or whatever other "period regular" activity you have (do not include commas - commas will be replaced with dashes).</li>
+	<li>Leave all of the Letter boxes checked if this event occurs on every letter day (don't worry about days that drop - the program knows which letter day it is).  If an event occurs only on specific Letter days (like science lab), just leave those boxes checked.</li>
+	<li>Click "Submit Schedule".  Your CSV file will be created and you will see instructions on how to set up your Google calendar</li>
+	<li>Here is an example: <img src="calexample.PNG" border="3" alt=""></li>
+	</ul>
+
+	<hr />
+
+	<form name="schedule" id="schedule" action=<?php echo $_SERVER['PHP_SELF']?> method="post">
+		Start Date: <input type=text name='startdate' id='startdate' size=12 value='2015-08-27' tabindex=1> End Date: <input type=text name='enddate' id='enddate' size=12 value='2016-06-18' tabindex=2></br>
+		Period 1 Class: <input type="checkbox" checked name="day1[]" value="A" > A <input type="checkbox" checked name="day1[]" value="B" > B <input type="checkbox" checked name="day1[]" value="C" > C <input type="checkbox" checked name="day1[]" value="D" > D <input type="checkbox" checked name="day1[]" value="E" > E <input type="checkbox" checked name="day1[]" value="F" > F <input type="checkbox" checked name="day1[]" value="G" > G <input type="checkbox" checked name="day1[]" value="H" > H <input type=text name='period1' id='period1' placeholder="Period 1 Class" size=25 tabindex=3/> </br>
+		Period 2 Class: <input type="checkbox" checked name="day2[]" value="A" > A <input type="checkbox" checked name="day2[]" value="B" > B <input type="checkbox" checked name="day2[]" value="C" > C <input type="checkbox" checked name="day2[]" value="D" > D <input type="checkbox" checked name="day2[]" value="E" > E <input type="checkbox" checked name="day2[]" value="F" > F <input type="checkbox" checked name="day2[]" value="G" > G <input type="checkbox" checked name="day2[]" value="H" > H <input type=text name='period2' id='period2' placeholder="Period 2 Class" size=25 tabindex=4></br>
+		Period 3 Class: <input type="checkbox" checked name="day3[]" value="A" > A <input type="checkbox" checked name="day3[]" value="B" > B <input type="checkbox" checked name="day3[]" value="C" > C <input type="checkbox" checked name="day3[]" value="D" > D <input type="checkbox" checked name="day3[]" value="E" > E <input type="checkbox" checked name="day3[]" value="F" > F <input type="checkbox" checked name="day3[]" value="G" > G <input type="checkbox" checked name="day3[]" value="H" > H <input type=text name='period3' id='period3' placeholder="Period 3 Class" size=25 tabindex=5></br>
+		Period 4 Class: <input type="checkbox" checked name="day4[]" value="A" > A <input type="checkbox" checked name="day4[]" value="B" > B <input type="checkbox" checked name="day4[]" value="C" > C <input type="checkbox" checked name="day4[]" value="D" > D <input type="checkbox" checked name="day4[]" value="E" > E <input type="checkbox" checked name="day4[]" value="F" > F <input type="checkbox" checked name="day4[]" value="G" > G <input type="checkbox" checked name="day4[]" value="H" > H <input type=text name='period4' id='period4' placeholder="Period 4 Class" size=25 tabindex=6></br>
+		Period 5 Class: <input type="checkbox" checked name="day5[]" value="A" > A <input type="checkbox" checked name="day5[]" value="B" > B <input type="checkbox" checked name="day5[]" value="C" > C <input type="checkbox" checked name="day5[]" value="D" > D <input type="checkbox" checked name="day5[]" value="E" > E <input type="checkbox" checked name="day5[]" value="F" > F <input type="checkbox" checked name="day5[]" value="G" > G <input type="checkbox" checked name="day5[]" value="H" > H <input type=text name='period5' id='period5' placeholder="Period 5 Class" size=25 tabindex=7></br>
+		Period 6 Class: <input type="checkbox" checked name="day6[]" value="A" > A <input type="checkbox" checked name="day6[]" value="B" > B <input type="checkbox" checked name="day6[]" value="C" > C <input type="checkbox" checked name="day6[]" value="D" > D <input type="checkbox" checked name="day6[]" value="E" > E <input type="checkbox" checked name="day6[]" value="F" > F <input type="checkbox" checked name="day6[]" value="G" > G <input type="checkbox" checked name="day6[]" value="H" > H <input type=text name='period6' id='period6' placeholder="Period 6 Class" size=25 tabindex=8> </br>
+		Period 7 Class: <input type="checkbox" checked name="day7[]" value="A" > A <input type="checkbox" checked name="day7[]" value="B" > B <input type="checkbox" checked name="day7[]" value="C" > C <input type="checkbox" checked name="day7[]" value="D" > D <input type="checkbox" checked name="day7[]" value="E" > E <input type="checkbox" checked name="day7[]" value="F" > F <input type="checkbox" checked name="day7[]" value="G" > G <input type="checkbox" checked name="day7[]" value="H" > H <input type=text name='period7' id='period7' placeholder="Period 7 Class" size=25 tabindex=9></br>
+		Period 8 Class: <input type="checkbox" checked name="day8[]" value="A" > A <input type="checkbox" checked name="day8[]" value="B" > B <input type="checkbox" checked name="day8[]" value="C" > C <input type="checkbox" checked name="day8[]" value="D" > D <input type="checkbox" checked name="day8[]" value="E" > E <input type="checkbox" checked name="day8[]" value="F" > F <input type="checkbox" checked name="day8[]" value="G" > G <input type="checkbox" checked name="day8[]" value="H" > H <input type=text name='period8' id='period8' placeholder="Period 8 Class" size=25 tabindex=10></br>
+		<input type="button" onclick="SetAllCheckBoxes('schedule', 'day1[]', false);SetAllCheckBoxes('schedule', 'day2[]', false);SetAllCheckBoxes('schedule', 'day3[]', false);SetAllCheckBoxes('schedule', 'day4[]', false);SetAllCheckBoxes('schedule', 'day5[]', false);SetAllCheckBoxes('schedule', 'day6[]', false);SetAllCheckBoxes('schedule', 'day7[]', false);SetAllCheckBoxes('schedule', 'day8[]', false);" value="Uncheck All">&nbsp;&nbsp;<input type="button" onclick="SetAllCheckBoxes('schedule', 'day1[]', true);SetAllCheckBoxes('schedule', 'day2[]', true);SetAllCheckBoxes('schedule', 'day3[]', true);SetAllCheckBoxes('schedule', 'day4[]', true);SetAllCheckBoxes('schedule', 'day5[]', true);SetAllCheckBoxes('schedule', 'day6[]', true);SetAllCheckBoxes('schedule', 'day7[]', true);SetAllCheckBoxes('schedule', 'day8[]', true);" value="Check All">&nbsp;&nbsp;
+		<input type=submit id='submitschedule' name='submitschedule' value='Submit Schedule' tabindex=10>
+	</form>
+
+</body>
+</html>
+
+<?
+}
+?>
