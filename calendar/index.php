@@ -14,7 +14,24 @@ $link = mysql_connect(CONF_LOCATION, CONF_ADMINID, CONF_ADMINPASS) or die("poop"
 <html>
  <head>
   <title> CSV Calendar Creator - Newtown High School </title>
-  <meta name="Author" content="Charles Dumais">
+  <meta name="Author" content="Devin Matte & Charles Dumais">
+<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
   <script type="text/javascript">
 <!--
 function SetAllCheckBoxes(FormName, FieldName, CheckValue)
@@ -56,7 +73,7 @@ if (isset($_POST['submitschedule'])){
 	$activedates=mysql_query($date_query);
 
 	//Special Days
-	$special_days = array("AS","BS","CS","DS","ES","FS","GS","HS","S","SS","M1","M2","M3","M4","Y1","Y2","Y3","Y4","EAA","EAB","EAC","EAD","EAE","EAF","EAG","EAH");
+	$special_days = array("AS","BS","CS","DS","ES","FS","GS","HS","S","SS","M1","M2","M3","M4","Y1","Y2","Y3","Y4","EAA","EAB","EAC","EAD","EAE","EAF","EAG","EAH","APL","BPL","CPL","DPL","EPL","FPL","GPL","HPL","ATD","HTD");
 	//
 
 	$export_text = "";
