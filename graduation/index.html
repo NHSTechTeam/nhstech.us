@@ -26,7 +26,7 @@
 		</header>
 
 		<footer>
-			<a class="button style2 scrolly-middle" href="#deluxe">Deluxe Features</a>
+			<a class="button style2 scrolly-middle" href="#banner">Order Now</a>
 		</footer>
 	</section><!-- Banner -->
 
@@ -117,7 +117,28 @@
 
 	<article id="deluxe" class="container box style3">
 		<script>
-function passWord() {
+function passWord2015() {
+		var testV = 1;
+		var pass1 = prompt('Please Enter Your Password',' ');
+		while (testV < 3) {
+		if (!pass1)
+		history.go(-1);
+		if (pass1.toLowerCase() == "awf4pt") {
+		alert('Enjoy your Digital Copy of Graduation');
+		window.open('grad2015.html');
+		break;
+		}
+		testV+=1;
+		var pass1 =
+		prompt('Access Denied - Password Incorrect, Please Try Again.');
+		}
+		if (pass1.toLowerCase()!="password" & testV ==3)
+		history.go(-1);
+		return " ";
+		}
+		</script>
+        <script>
+function passWord2016() {
 		var testV = 1;
 		var pass1 = prompt('Please Enter Your Password',' ');
 		while (testV < 3) {
@@ -144,8 +165,8 @@ function passWord() {
 			<p>If you ordered a Deluxe Graduation DVD. Then it came with a password to view the whole event online as well as with the DVD. Enter the password here to view Graduation on any of your devices.</p>
 
 			<form>
-				<input onclick="passWord()" type="button" value="Class of 2015">
-                <input onclick="passWord()" type="button" value="Class of 2016 (Coming Soon)">
+				<input onclick="passWord2015()" type="button" value="Class of 2015">
+                <input onclick="passWord2016()" type="button" value="Class of 2016 (Coming Soon)">
 			</form>
 		</header>
 	</article><!-- Generic -->

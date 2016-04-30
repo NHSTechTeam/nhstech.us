@@ -29,3 +29,6 @@ productions/api/_notes/dwsync.xml
 productions/css/_notes/dwsync.xml
 productions/fonts/_notes/dwsync.xml
 productions/js/_notes/dwsync.xml
+*.xml
+clubs/css/images/_notes/dwsync.xml
+clubs/images/_notes/dwsync.xml
