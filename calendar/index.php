@@ -72,10 +72,14 @@ if (isset($_POST['submitschedule'])){
 	$date_query="select * from Days where Date between \"".$_POST['startdate']."\" and \"".$_POST['enddate']."\"";
 	$activedates=mysql_query($date_query);
 
-	//Special Days
-	$special_days = array("AS","BS","CS","DS","ES","FS","GS","HS","S","SS","M1","M2","M3","M4","Y1","Y2","Y3","Y4","EAA","EAB","EAC","EAD","EAE","EAF","EAG","EAH","APL","BPL","CPL","DPL","EPL","FPL","GPL","HPL","ATD","HTD");
-	//
+/*
 
+This is the only section that needs to be edited for the program to work. You simply need to list out all the special day IDs. So anything that isn't A,B,C,D...
+
+*/
+	$special_days = array("AS","BS","CS","DS","ES","FS","GS","HS","S","SS","M1","M2","M3","M4","Y1","Y2","Y3","Y4","EAA","EAB","EAC","EAD","EAE","EAF","EAG","EAH","APLC","BPLC","CPLC","DPLC","EPLC","FPLC","GPLC","HPLC","ATD","HTD","BTD","DTD");
+
+	//Stop editing
 	$export_text = "";
 
 	$export_text = "Subject,Start Date,Start Time,End Date,End Time\r\n";
@@ -154,8 +158,9 @@ if (isset($_POST['submitschedule'])){
 
 	<hr />
 
+//Edit the actual input
 	<form name="schedule" id="schedule" action=<?php echo $_SERVER['PHP_SELF']?> method="post">
-		Start Date: <input type=text name='startdate' id='startdate' size=12 value='2015-08-27' tabindex=1> End Date: <input type=text name='enddate' id='enddate' size=12 value='2016-06-18' tabindex=2></br>
+		Start Date: <input type=text name='startdate' id='startdate' size=12 value='2016-08-25' tabindex=1> End Date: <input type=text name='enddate' id='enddate' size=12 value='2017-06-30' tabindex=2></br>
 		Period 1 Class: <input type="checkbox" checked name="day1[]" value="A" > A <input type="checkbox" checked name="day1[]" value="B" > B <input type="checkbox" checked name="day1[]" value="C" > C <input type="checkbox" checked name="day1[]" value="D" > D <input type="checkbox" checked name="day1[]" value="E" > E <input type="checkbox" checked name="day1[]" value="F" > F <input type="checkbox" checked name="day1[]" value="G" > G <input type="checkbox" checked name="day1[]" value="H" > H <input type=text name='period1' id='period1' placeholder="Period 1 Class" size=25 tabindex=3/> </br>
 		Period 2 Class: <input type="checkbox" checked name="day2[]" value="A" > A <input type="checkbox" checked name="day2[]" value="B" > B <input type="checkbox" checked name="day2[]" value="C" > C <input type="checkbox" checked name="day2[]" value="D" > D <input type="checkbox" checked name="day2[]" value="E" > E <input type="checkbox" checked name="day2[]" value="F" > F <input type="checkbox" checked name="day2[]" value="G" > G <input type="checkbox" checked name="day2[]" value="H" > H <input type=text name='period2' id='period2' placeholder="Period 2 Class" size=25 tabindex=4></br>
 		Period 3 Class: <input type="checkbox" checked name="day3[]" value="A" > A <input type="checkbox" checked name="day3[]" value="B" > B <input type="checkbox" checked name="day3[]" value="C" > C <input type="checkbox" checked name="day3[]" value="D" > D <input type="checkbox" checked name="day3[]" value="E" > E <input type="checkbox" checked name="day3[]" value="F" > F <input type="checkbox" checked name="day3[]" value="G" > G <input type="checkbox" checked name="day3[]" value="H" > H <input type=text name='period3' id='period3' placeholder="Period 3 Class" size=25 tabindex=5></br>
