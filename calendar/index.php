@@ -158,7 +158,6 @@ This is the only section that needs to be edited for the program to work. You si
 
 	<hr />
 
-//Edit the actual input
 	<form name="schedule" id="schedule" action=<?php echo $_SERVER['PHP_SELF']?> method="post">
 		Start Date: <input type=text name='startdate' id='startdate' size=12 value='2016-08-25' tabindex=1> End Date: <input type=text name='enddate' id='enddate' size=12 value='2017-06-30' tabindex=2></br>
 		Period 1 Class: <input type="checkbox" checked name="day1[]" value="A" > A <input type="checkbox" checked name="day1[]" value="B" > B <input type="checkbox" checked name="day1[]" value="C" > C <input type="checkbox" checked name="day1[]" value="D" > D <input type="checkbox" checked name="day1[]" value="E" > E <input type="checkbox" checked name="day1[]" value="F" > F <input type="checkbox" checked name="day1[]" value="G" > G <input type="checkbox" checked name="day1[]" value="H" > H <input type=text name='period1' id='period1' placeholder="Period 1 Class" size=25 tabindex=3/> </br>
