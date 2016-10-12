@@ -21,7 +21,8 @@
       var queryString = encodeURIComponent('SELECT A, B');
 
       var query = new google.visualization.Query(
-          'https://docs.google.com/spreadsheets/d/1cnoORqpv3siFerbq4bnJFtVXjJrRhUvIbzqYdWhYIjM/gviz/tq?gid=0&headers=1&tq=' + queryString);
+	  	// So the link is the google link up to without the /edit?usp=sharing portion. Everything before that is necesary. Then followed by /gviz/tq?gid=0&headers=1&tq= as seen below
+          'https://docs.google.com/spreadsheets/d/1a8_xp7WYCVWfGldZLzxI9F8yh34j6YvIl09h_F5CVK0/gviz/tq?gid=0&headers=1&tq=' + queryString);
       query.send(handleQueryResponse);
     }
 
