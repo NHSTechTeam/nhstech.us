@@ -134,13 +134,6 @@ This is the only section that needs to be edited for the program to work. You si
 ?>
 <div id="wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" width="10%" alt="" /></span>
-						<h1>Welcome to the Newtown High School Calendar Generator</h1>
-						<p>Maintained by NHS Technology Team</p>
-					</header>
-
 				<!-- Main -->
 					<div id="main">
 
@@ -149,7 +142,7 @@ This is the only section that needs to be edited for the program to work. You si
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Welcome to the Newtown High School Calendar Generator</h2>
+											<h2>Thanks for using the Newtown High School Calendar Generator</h2>
 										</header>
                                         <ul class="actions">
 											<li><a href="http://nhstech.us/calendar/calendar.csv" class="button special icon fa-download">Download File</a></li>
@@ -159,12 +152,12 @@ This is the only section that needs to be edited for the program to work. You si
 	And here are instructions for creating a new calendar in Gmail and importing the CSV file:
 	<ul>
 	<li>Open Gmail and access the calendar tab</li>
-	<li>Click on the "gear" in the upper right corner and access "settings" <img src="images/settings.PNG" width="229" height="304" border="0" alt=""></li>
-	<li>Click on the "Calendars" tab <img src="images/calendartab.PNG" width="359" height="168" border="0" alt=""></li>
-	<li>Click on the "create new calendar" button <img src="images/createnewcalendar.PNG" width="404" height="319" border="0" alt=""></li>
-	<li>Create a new calendar by entering a calendar name and clicking on "Create Calendar" (you can import the file directly into your main calendar <em>but</em> if you create a new calendar you can always delete it or share it without affecting your other events) <img src="images/createnewcalendar2.PNG" width="530" height="202" border="0" alt=""></li>
-	<li>Return to calendar, then settings (under the gear), then calendar, and "import calendar" <img src="images/import.PNG" width="398" height="42" border="0" alt=""></li>
-	<li>Select the CSV file that you downloaded, select your new calendar, and then click "Import" <img src="images/import2.PNG" width="532" height="295" border="0" alt=""></li>
+	<li>Click on the "gear" in the upper right corner and access "settings" </br> <img src="images/settings.PNG" width="35%" border="0" alt=""></li>
+	<li>Click on the "Calendars" tab </br> <img src="images/calendartab.PNG" width="50%" border="0" alt=""></li>
+	<li>Click on the "create new calendar" button </br> <img src="images/createnewcalendar.PNG" width="50%" border="0" alt=""></li>
+	<li>Create a new calendar by entering a calendar name and clicking on "Create Calendar" (you can import the file directly into your main calendar <em>but</em> if you create a new calendar you can always delete it or share it without affecting your other events) </br> <img src="images/createnewcalendar2.PNG" width="50%" border="0" alt=""></li>
+	<li>Return to calendar, then settings (under the gear), then calendar, and "import calendar" </br> <img src="images/import.PNG" width="50%" border="0" alt=""></li>
+	<li>Select the CSV file that you downloaded, select your new calendar, and then click "Import" </br> <img src="images/import2.PNG" width="50%" border="0" alt=""></li>
 	</ul>
 									</div>
 								</div>
@@ -215,7 +208,6 @@ This is the only section that needs to be edited for the program to work. You si
 	<li>Click "Submit Schedule".  Your CSV file will be created and you will see instructions on how to set up your Google calendar</li>
 	</ul></p>
 									</div>
-									<span class="image"><img src="images/calexample.PNG" alt="" /></span>
 								</div>
 							</section>
 
@@ -319,6 +311,7 @@ This is the only section that needs to be edited for the program to work. You si
 		</br></br>
         <input type=submit id='submitschedule' name='submitschedule' value='Submit Schedule' tabindex=10>
 	</form>
+    <p>Currently Supporting Schedules for the 2016-2017 School Year</p>
 							</section>
 
 					</div>
