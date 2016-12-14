@@ -2,7 +2,7 @@ NHS Tech Team Website
 =====================
 Update Site:
 ------------
-### Steps:
+### Majority of Changes:
 1. Push all changes to the repository
 2. SSH into Godaddy server
     - Information on how to get SSH access provided through executive request (should not be publicly available)
@@ -11,7 +11,13 @@ Update Site:
 5. Update submodules `git submodule foreach git pull origin master`
 6. Pull again for good measure `git pull`
 
-Congrats you've updated the site!
+#### For Large Files:
+1. Use an FTP client to connect to `nhstech.us`
+2. Set the root folder to `public_html`
+3. Upload files to their proper directory
+4. Make sure these files have been marked in the `.gitignore` file to be ignored so they don't accidentally try to get version controlled in the repository
+
+**Congrats you've updated the site!**
 
 Index:
 ------
