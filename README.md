@@ -1,5 +1,18 @@
 NHS Tech Team Website
 =====================
+Update Site:
+------------
+### Steps:
+1. Push all changes to the repository
+2. SSH into Godaddy server
+    - Information on how to get SSH access provided through executive request (should not be publicly available)
+3. Go into public_html `cd public_html`
+4. Pull Changes `git pull`
+5. Update submodules `git submodule foreach git pull origin master`
+6. Pull again for good measure `git pull`
+
+Congrats you've updated the site!
+
 Index:
 ------
 * [Main Page](http://nhstech.us)
