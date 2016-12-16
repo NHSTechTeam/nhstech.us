@@ -15,11 +15,7 @@ $size-padding-lr: 2.5em;
 /* Basic */
 
 	html {
-		background-color:		$color-accent2-bg;
-		background-attachment:	fixed,						fixed;
-		background-image:		url('images/overlay.png'),	url('../images/bg.jpg');
-		background-position:	top left,					center center;
-		background-repeat:		repeat,						none;
+		background: $color-accent2-bg url('images/overlay.png'), url('../images/bg.jpg') repeat, none fixed, fixed top left, center center;
 		background-size:		auto,						cover;
 	}
 
@@ -949,9 +945,7 @@ $size-padding-lr: 2.5em;
 
 	.main-bg {
 		@include vendor-property('transition', 'opacity #{$duration-bg-fadein} ease-out');
-		background-attachment:		fixed,							fixed;
-		background-position:		top left,						center center;
-		background-repeat:			repeat,							none;
+		background: repeat, none fixed, fixed top left, center center;
 		background-size:			auto,							cover;
 		height: 100%;
 		left: 0;
@@ -998,10 +992,8 @@ $size-padding-lr: 2.5em;
 
 		.goto-next {
 			@include vendor-property('transition', 'background-color #{$duration-transition} ease-in-out');
-			background-color: $color-border-bg;
-			background-image: url('images/arrow.svg');
-			background-position: center center;
-			background-repeat: no-repeat;
+			//noinspection CssUnknownTarget
+			background: $color-border-bg url('images/arrow.svg') no-repeat center center;
 			border-radius: 100%;
 			border: 0;
 			bottom: 3em;

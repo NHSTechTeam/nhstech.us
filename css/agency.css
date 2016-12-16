@@ -268,10 +268,7 @@ fieldset[disabled] .btn-xl.active {
 header {
     text-align: center;
     color: #fff;
-    background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
-    background-position: center center;
-    background-repeat: none;
+    background: url(../img/header-bg.jpg) none scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -656,10 +653,7 @@ aside.clients img {
 }
 
 section#contact {
-    background-color: #222;
-    background-image: url(../img/map-image.png);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #222 url(../img/map-image.png) no-repeat center;
 }
 
 section#contact .section-heading {

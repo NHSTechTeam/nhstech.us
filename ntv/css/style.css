@@ -10,11 +10,7 @@
 /* Basic */
 
 	html {
-		background-color: #313a3d;
-		background-attachment: fixed,						fixed;
-		background-image: url("images/overlay.png"), url("../images/bg.jpg");
-		background-position: top left,					center center;
-		background-repeat: repeat,						none;
+		background: #313a3d url("images/overlay.png"), url("../images/bg.jpg") repeat, none fixed, fixed top left, center center;
 		background-size: auto,						cover;
 	}
 
@@ -1022,9 +1018,7 @@
 		-o-transition: opacity 0.5s ease-out;
 		-ms-transition: opacity 0.5s ease-out;
 		transition: opacity 0.5s ease-out;
-		background-attachment: fixed,							fixed;
-		background-position: top left,						center center;
-		background-repeat: repeat,							none;
+		background: repeat, none fixed, fixed top left, center center;
 		background-size: auto,							cover;
 		height: 100%;
 		left: 0;
@@ -1076,10 +1070,7 @@
 			-o-transition: background-color 0.2s ease-in-out;
 			-ms-transition: background-color 0.2s ease-in-out;
 			transition: background-color 0.2s ease-in-out;
-			background-color: rgba(144, 144, 144, 0.075);
-			background-image: url("images/arrow.svg");
-			background-position: center center;
-			background-repeat: no-repeat;
+			background: rgba(144, 144, 144, 0.075) url("images/arrow.svg") no-repeat center center;
 			border-radius: 100%;
 			border: 0;
 			bottom: 3em;

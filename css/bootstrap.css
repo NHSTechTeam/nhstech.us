@@ -2358,8 +2358,7 @@ output {
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
-  background-color: #fff;
-  background-image: none;
+  background: #fff none;
   border: 1px solid #ccc;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
@@ -3189,8 +3188,7 @@ tbody.collapse.in {
 .dropdown-menu > .disabled > a:focus {
   text-decoration: none;
   cursor: not-allowed;
-  background-color: transparent;
-  background-image: none;
+  background: transparent none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .open > .dropdown-menu {
@@ -3901,8 +3899,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-top: 8px;
   margin-right: 15px;
   margin-bottom: 8px;
-  background-color: transparent;
-  background-image: none;
+  background: transparent none;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -3980,10 +3977,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-form {
   padding: 10px 15px;
-  margin-top: 8px;
-  margin-right: -15px;
-  margin-bottom: 8px;
-  margin-left: -15px;
+  margin: 8px -15px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 1px 0 rgba(255, 255, 255, .1);
@@ -4752,8 +4746,7 @@ a.thumbnail.active {
 .progress-bar[aria-valuenow="0"] {
   min-width: 30px;
   color: #777;
-  background-color: transparent;
-  background-image: none;
+  background: transparent none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -5537,8 +5530,7 @@ button.close {
   position: absolute;
   width: 0;
   height: 0;
-  border-color: transparent;
-  border-style: solid;
+  border: solid transparent;
 }
 .tooltip.top .tooltip-arrow {
   bottom: 0;
@@ -5642,8 +5634,7 @@ button.close {
   display: block;
   width: 0;
   height: 0;
-  border-color: transparent;
-  border-style: solid;
+  border: solid transparent;
 }
 .popover > .arrow {
   border-width: 11px;

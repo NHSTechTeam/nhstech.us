@@ -10,11 +10,8 @@
 
 	body
 	{
-		background-image:		url('../../images/bg.jpg');
-		background-repeat:		no-repeat;
 		background-size:		cover;
-		background-position: 	auto;
-		background-attachment:	scroll;
+		background: url('../../images/bg.jpg') no-repeat scroll auto;
 		-ms-behavior: url('css/ie/backgroundsize.min.htc');
 	}
 
