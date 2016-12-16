@@ -685,7 +685,7 @@
 				.box.style2 .inner
 				{
 					position: relative;
-					padding: 40px 0 0px 0;
+					padding: 40px 0 0 0;
 				}
 
 					.box.style2 .inner:after
