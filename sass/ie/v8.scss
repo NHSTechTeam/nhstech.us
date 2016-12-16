@@ -29,10 +29,8 @@
 /* Banner */
 
 	#banner {
-		background-image: url('../../images/banner.jpg');
-		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: auto;
+		background: url('../../images/banner.jpg') no-repeat auto;
 		-ms-behavior: url('css/ie/backgroundsize.min.htc');
 	
 		.inner {
@@ -43,9 +41,7 @@
 /* CTA  */
 
 	#cta {
-		background-image: url('../../images/banner.jpg');
-		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: auto;
+		background: url('../../images/banner.jpg') no-repeat auto;
 		-ms-behavior: url('css/ie/backgroundsize.min.htc');
 	}

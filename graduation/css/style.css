@@ -14,12 +14,8 @@
 
 	body
 	{
-		background-color:		#183026;
-		background-image:		url('images/overlay.png'),			url('../images/bg.jpg');
-		background-repeat:		repeat,								no-repeat;
 		background-size:		auto,								cover;
-		background-position: 	top left,							center 0;
-		background-attachment:	fixed,								fixed;
+		background: #183026 url('images/overlay.png'), url('../images/bg.jpg') repeat, no-repeat fixed, fixed top left, center 0;
 	}
 
 		body.is-scroll
