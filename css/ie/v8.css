@@ -6,32 +6,32 @@
 
 /* Section/Article */
 
-	section > .last-child,
-	article > .last-child {
-		margin-bottom: 0;
-	}
+section > .last-child,
+article > .last-child {
+    margin-bottom: 0;
+}
 
-	section.last-child,
-	article.last-child {
-		margin-bottom: 0;
-	}
+section.last-child,
+article.last-child {
+    margin-bottom: 0;
+}
 
 /* Banner */
 
-	#banner {
-		background-size: cover;
-		background: url("../../images/banner.jpg") no-repeat auto;
-		-ms-behavior: url("css/ie/backgroundsize.min.htc");
-	}
+#banner {
+    background-size: cover;
+    background: url("../../images/banner.jpg") no-repeat auto;
+    -ms-behavior: url("css/ie/backgroundsize.min.htc");
+}
 
-		#banner .inner {
-			background: #341b2b;
-		}
+#banner .inner {
+    background: #341b2b;
+}
 
 /* CTA  */
 
-	#cta {
-		background-size: cover;
-		background: url("../../images/banner.jpg") no-repeat auto;
-		-ms-behavior: url("css/ie/backgroundsize.min.htc");
-	}
+#cta {
+    background-size: cover;
+    background: url("../../images/banner.jpg") no-repeat auto;
+    -ms-behavior: url("css/ie/backgroundsize.min.htc");
+}
