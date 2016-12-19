@@ -10,8 +10,12 @@
 
 	body
 	{
+		background-color:		#203936;
+		background-image:		url('images/overlay.png'),			url('../images/bg-alt.jpg');
+		background-repeat:		repeat,								no-repeat;
 		background-size:		auto,								100% auto;
-		background: #203936 url('images/overlay.png'), url('../images/bg-alt.jpg') repeat, no-repeat scroll, scroll top left, top center;
+		background-position:	top left,							top center;
+		background-attachment:	scroll,								scroll;
 	}
 
 	body,input,textarea,select

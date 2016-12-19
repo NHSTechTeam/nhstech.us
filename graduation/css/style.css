@@ -14,8 +14,12 @@
 
 	body
 	{
+		background-color:		#183026;
+		background-image:		url('images/overlay.png'),			url('../images/bg.jpg');
+		background-repeat:		repeat,								no-repeat;
 		background-size:		auto,								cover;
-		background: #183026 url('images/overlay.png'), url('../images/bg.jpg') repeat, no-repeat fixed, fixed top left, center 0;
+		background-position: 	top left,							center 0;
+		background-attachment:	fixed,								fixed;
 	}
 
 		body.is-scroll
@@ -681,7 +685,7 @@
 				.box.style2 .inner
 				{
 					position: relative;
-					padding: 40px 0 0 0;
+					padding: 40px 0 0px 0;
 				}
 
 					.box.style2 .inner:after

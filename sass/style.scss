@@ -540,7 +540,10 @@ $pattern-background-size: 25em;
 		}
 	
 		&.style2 {
-			background: $color-one-bg url('images/light-bl.svg'), url('images/light-br.svg') no-repeat, no-repeat bottom left, bottom right;
+			background-color: $color-one-bg;
+			background-image: url('images/light-bl.svg'), url('images/light-br.svg');
+			background-position: bottom left, bottom right;
+			background-repeat: no-repeat, no-repeat;
 			background-size: $pattern-background-size, $pattern-background-size;
 			color: $color-one-fg;
 
@@ -756,7 +759,11 @@ $pattern-background-size: 25em;
 	@keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
 
 	#banner {
-		background: $color-three-bg url('images/light-bl.svg'), url('images/light-br.svg'), url('images/overlay.png'), url('../images/banner.jpg') no-repeat, no-repeat, repeat, no-repeat scroll, scroll, scroll, fixed bottom left, bottom right, top left, top center;
+		background-attachment: scroll, scroll, scroll, fixed;
+		background-color: $color-three-bg;
+		background-image: url('images/light-bl.svg'), url('images/light-br.svg'), url('images/overlay.png'), url('../images/banner.jpg');
+		background-position: bottom left, bottom right, top left, top center;
+		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: $pattern-background-size, $pattern-background-size, auto, cover;
 		color: $color-banner-fg;
 		cursor: default;
@@ -814,7 +821,9 @@ $pattern-background-size: 25em;
 /* Main */
 
 	#main {
-		background: url('images/dark-tl.svg'), url('images/dark-tr.svg'), url('images/dark-bl.svg'), url('images/dark-br.svg') no-repeat top left, top right, bottom left, bottom right;
+		background-image: url('images/dark-tl.svg'), url('images/dark-tr.svg'), url('images/dark-bl.svg'), url('images/dark-br.svg');
+		background-position: top left, top right, bottom left, bottom right;
+		background-repeat: no-repeat;
 		background-size: $pattern-background-size;
 		padding: 7em 0;
 		
@@ -844,7 +853,11 @@ $pattern-background-size: 25em;
 /* CTA */
 
 	#cta {
-		background: $color-three-bg url('images/light-tl.svg'), url('images/light-tr.svg'), url('images/overlay.png'), url('../images/banner.jpg') no-repeat, no-repeat, repeat, no-repeat scroll, scroll, scroll, fixed top left, top right, top left, bottom center;
+		background-attachment: scroll, scroll, scroll, fixed;
+		background-color: $color-three-bg;
+		background-image: url('images/light-tl.svg'), url('images/light-tr.svg'), url('images/overlay.png'), url('../images/banner.jpg');
+		background-position: top left, top right, top left, bottom center;
+		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: $pattern-background-size, $pattern-background-size, auto, cover;
 		color: $color-three-fg;
 		padding: 5em;

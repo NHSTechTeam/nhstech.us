@@ -150,7 +150,10 @@
 /* Banner */
 
 	#banner {
-		background: url('../../images/banner.jpg') no-repeat scroll auto;
+		background-attachment:	scroll;
+		background-image:		url('../../images/banner.jpg');
+		background-position:	auto;
+		background-repeat:		no-repeat;
 		background-size:		cover;
 		-ms-behavior: url('css/ie/backgroundsize.min.htc');
 		
