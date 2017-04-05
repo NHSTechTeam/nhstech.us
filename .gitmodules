@@ -7,3 +7,6 @@
 [submodule "leaderboard"]
 	path = leaderboard
 	url = https://github.com/NHSTechTeam/Production-LeaderBoard
+[submodule "member"]
+	path = member
+	url = https://github.com/NHSTechTeam/Member-Center
