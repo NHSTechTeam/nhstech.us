@@ -4,3 +4,6 @@
 [submodule "graduation"]
 	path = graduation
 	url = https://github.com/NHSTechTeam/Graduation
+[submodule "leaderboard"]
+	path = leaderboard
+	url = https://github.com/NHSTechTeam/Production-LeaderBoard
