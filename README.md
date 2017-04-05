@@ -8,7 +8,7 @@ Update Site:
     - Information on how to get SSH access provided through executive request. Ask [@devinmatte](https://github.com/devinmatte).
 3. Go into public_html `cd public_html`
 4. Pull Changes `git pull`
-5. Run Updates `update`
+5. Run Updates `update` or `git pull && git submodule init && git submodule update && git submodule foreach git pull origin master`
 
 #### For Large Files:
 1. Use an FTP client to connect to `nhstech.us`
@@ -22,6 +22,8 @@ Subsites
 --------
 * [Calendar-Maker](https://github.com/NHSTechTeam/Calendar-Maker)
 * [Graduation](https://github.com/NHSTechTeam/Graduation)
+* [Production-Leaderboard](https://github.com/NHSTechTeam/Production-LeaderBoard)
+* [Member-Center](https://github.com/NHSTechTeam/Member-Center)
 
 Index:
 ------
