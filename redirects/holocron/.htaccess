@@ -1,6 +1,0 @@
-
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^holocron\.nhstech\.us$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.holocron\.nhstech\.us$
-RewriteRule ^/?$ "https\:\/\/drive\.google\.com\/folderview\?id\=0B3e6cL0rTgAUOXMyNTcxalkwclE\&amp\;usp\=sharing" [R=301,L]
-
