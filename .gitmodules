@@ -10,3 +10,9 @@
 [submodule "member"]
 	path = member
 	url = https://github.com/NHSTechTeam/Member-Center
+[submodule "Productions"]
+	path = Productions
+	url = https://github.com/NHSTechTeam/Productions
+[submodule "productions"]
+	path = productions
+	url = https://github.com/NHSTechTeam/Productions
