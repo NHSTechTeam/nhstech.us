@@ -22,3 +22,6 @@
 [submodule "clubs"]
 	path = clubs
 	url = https://github.com/NHSTechTeam/Clubs
+[submodule "git-challenge"]
+	path = git-challenge
+	url = https://github.com/devinmatte/Git-Challenge
