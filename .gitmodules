@@ -25,3 +25,6 @@
 [submodule "git-challenge"]
 	path = git-challenge
 	url = https://github.com/devinmatte/Git-Challenge
+[submodule "blog"]
+	path = blog
+	url = https://github.com/Bsg62799/NHS-Tech-Blog
