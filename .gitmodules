@@ -1,30 +1,36 @@
 [submodule "calendar"]
 	path = calendar
 	url = https://github.com/NHSTechTeam/Calendar-Maker
+	branch = master
 [submodule "graduation"]
 	path = graduation
 	url = https://github.com/NHSTechTeam/Graduation
+	branch = master
 [submodule "leaderboard"]
 	path = leaderboard
 	url = https://github.com/NHSTechTeam/Production-LeaderBoard
+	branch = master
 [submodule "member"]
 	path = member
 	url = https://github.com/NHSTechTeam/Member-Center
-[submodule "Productions"]
-	path = Productions
-	url = https://github.com/NHSTechTeam/Productions
+	branch = master
 [submodule "productions"]
 	path = productions
 	url = https://github.com/NHSTechTeam/Productions
+	branch = master
 [submodule "ntv"]
 	path = ntv
 	url = https://github.com/NHSTechTeam/NTV
+	branch = master
 [submodule "clubs"]
 	path = clubs
 	url = https://github.com/NHSTechTeam/Clubs
+	branch = master
 [submodule "git-challenge"]
 	path = git-challenge
 	url = https://github.com/devinmatte/Git-Challenge
+	branch = master
 [submodule "blog"]
 	path = blog
 	url = https://github.com/Bsg62799/NHS-Tech-Blog
+	branch = master
